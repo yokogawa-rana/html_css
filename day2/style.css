@@ -1,0 +1,11 @@
+body {
+    font-family: 'Times New Roman', Times, serif;;
+}
+
+.red-text {
+    color: red;
+}
+.normal {
+    font-size: 16px;
+    font-weight: 100;
+}
