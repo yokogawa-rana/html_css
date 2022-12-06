@@ -9,3 +9,35 @@ body {
     font-size: 16px;
     font-weight: 100;
 }
+
+.section {
+    height: 10px;
+    margin: 10px 0 0 0;
+    background-color: aqua;
+}
+
+/* boxmodal
+    1. margin
+    2. border
+    3. padding
+    4. content itself
+*/
+
+ 
+/* margin and padding for adding space in the element/tag */
+
+/* 
+margin: 12 top, 3 right, 6 bottom, 9 left;
+padding: 12 top, 3 right, 6 bottom, 9 left;
+ */
+
+ /* 
+ unit 
+    cm
+    mm
+    in
+    px
+    pc
+    em
+    rem
+ */

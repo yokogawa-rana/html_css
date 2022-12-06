@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Elements</title>
+</head>
+<body>
+    <h1>List of block element</h1>
+    <hr />
+    <address>
+        Office: <br>
+        At: Argaghat Road, Giridih<br>
+        Jharkhand, 815301
+    </address>
+    <hr />
+    <article>
+        <p>This is an example of article</p>
+    </article>
+    <blockquote>
+        This is an example of article
+    </blockquote>
+
+    <dl> <!-- Defination list-->
+        <dt>Coffee</dt> <!-- Defination term -->
+        <dd>Black hot drink</dd> <!-- Defination description -->
+        <dt>Milk</dt>
+        <dd>White cold drink</dd>
+    </dl>
+
+    <form action="/action_page.php">
+        <fieldset>
+         <legend>Personalia:</legend> <!--inline element-->
+         <label for="fname">First name:</label><!--inline element-->
+         <input type="text" id="fname" name="fname"><br><br><!--inline element-->
+         <label for="lname">Last name:</label><!--inline element-->
+         <input type="text" id="lname" name="lname"><br><br><!--inline element-->
+         <label for="email">Email:</label><!--inline element-->
+         <input type="email" id="email" name="email"><br><br><!--inline element-->
+         <label for="birthday">Birthday:</label><!--inline element-->
+         <input type="date" id="birthday" name="birthday"><br><br><!--inline element-->
+         <label for="password">Password:</label><!--inline element-->
+         <input type="password" id="password" placeholder="Password" name="password"><br><br><!--inline element-->
+         
+         <input type="submit" value="Submit"><!--inline element-->
+        </fieldset>
+       </form>
+
+    <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/440px-Image_created_with_a_mobile_phone.png" alt="Trulli Image"> <!--inline-->
+        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+    </figure>
+
+
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+
+    <ol>
+        <li></li>
+    </ol>
+    <footer>
+        &copy; copyright act 2022.
+    </footer>
+    <script>
+        // var c = document.getElementById("myCanvas");
+        // var ctx = c.getContext("2d");
+        // ctx.moveTo(0, 0);
+        // ctx.lineTo(200, 100);
+        // ctx.stroke();
+
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.fillText("Vikash Kumar", 10, 50);
+    </script>
+</body>
+</html>
