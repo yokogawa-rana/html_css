@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- element  -->
+    <!-- p tag -->
+
+    <p id="id1" name="paragraph" data-address="delhi" data-pin="110001"> 
+        content running-text
+    </p>
+    <p>hello</p>
+    <!-- 
+            attributes
+                - id
+                - name
+                - data-address
+                - data-pin
+     -->
+    <!-- <car wheel="4" color="red" price="800000" engineCapicity="1000">BMW</car> -->
+<script>
+    // const car = {
+    //     wheel: 4,
+    //     color: 'red',
+    //     price: '800000',
+    //     engineCapicity: '1000'
+    // }
+    // const p = {
+    //     id: 'id1',
+    //     name: "paragraph",
+    // }
+    
+//     hasAttribute(name) – checks for existence.
+
+//    getAttribute(name) – gets the value.
+
+//    setAttribute(name, value) – sets the value.
+
+//  removeAttribute(name) – removes the attribute.
+
+    const para = document.getElementById("id1");
+    console.log("para==<<", para);
+
+    console.log("id", para.hasAttribute("id")) // return type boolean
+
+    console.log("id", para.getAttribute("id")) // get fetch the value
+    console.log("name", para.getAttribute("name")) // get fetch the value
+
+    para.setAttribute("data-test", "paragaph1") // set new attributes
+
+    para.setAttribute("data-delete-example", "deleteme") // set new attributes
+
+    
+    setTimeout( function(){
+        para.removeAttribute("data-delete-example");
+    }, 5000)
+
+    console.log(para.dataset.pin)
+    console.log(para.dataset.address)
+    
+    console.log(para.dataset.deleteExample)
+</script>
+    
+</body>
+</html>
