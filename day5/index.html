@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+<body>
+    <section>
+        <form name="myform12">
+            <div>
+                <label>Full Name</label>
+                <input type="text"  name="fullName" value="Amrish Puri" pattern="[A-Za-z]{8}" required />
+            </div>
+            <div>
+                <label>Radio</label>
+                <input type="radio"  name="formRadio" value="radiobutton" />
+            </div>
+            <div>
+                <label>Checkbox</label>
+                <input type="checkbox"  name="formCheck" value="check1" />
+            </div>
+            <div>
+                <label>calender</label>
+                <input type="date" name="dateCalender" min="2000-01-01" max="2022-12-31"  />
+            </div>
+            <div>
+                <label>Age 18-22</label>
+                <input type="date"  name="ageDate" min="2000-01-01" max="2004-12-31" required />
+            </div>
+            <div>
+                <label>File</label>
+                <input type="file" name="fileAttach" />
+            </div>
+            <button name="submit">Submit</button>
+            <!-- <div>
+                <label>calender</label>
+                <input type="datetime" placeholder="dd/mm/yyyy"  />
+            </div> -->
+            
+
+            <!-- <div>
+                <label>Radio</label>
+                <input type="radio" value="Amrish Puri" />
+            </div> -->
+        </form>
+    </section>
+<script>
+    console.log("page loaded");
+</script>
+<!-- 
+    form
+        input
+        ==========
+        attributes
+        ==========
+            name
+            type
+                - text
+                - file
+                - radio
+                - checkbox
+                - button
+                - date
+                - datetime
+            required
+            pattern
+                
+    ============HOME==WORK=================    
+                // make a html file including all input type attributes
+                // reference take the help from google
+
+
+ -->
+
+ <!-- 
+  syntax 
+    document.forms.<<formName>>
+   eg. document.forms.myform12
+
+  input access using name
+
+    syntax 
+        document.forms.<<formName>>.<<feildName>>
+    eg. document.forms.myform12.fullName
+
+   input value access using name
+  
+    syntax 
+        document.forms.<<formName>>.<<feildName>>.value
+    eg. document.forms.myform12.fullName.value
+  -->
+</body>
+</html>
