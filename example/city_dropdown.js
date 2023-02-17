@@ -914,11 +914,25 @@ const states = [
 
 //   append option tag into select#citylist
 
-const selectElement = document.getElementById('citylist');
+const stateElement = document.getElementById('statelist');
+const cityElement = document.getElementById('citylist');
 
-selectElement.innerHTML = htmlConversion;
+stateElement.innerHTML = htmlConversion;
 
-console.log(selectElement.value)
+console.log(stateElement.value)
+let selectedState = -1;
+function onStateChange(event){
+   selectedState = event.currentTarget.value
+   if(selectedState > -1) {
+      const districts = states[selectedState].districts;
+      const allDistrict = districts.map( function(value, index){
+         return `<option value=city-${index}>${value}</option>`;
+      });
+      const htmlConversion = allDistrict.join(' ');
+      cityElement.innerHTML = htmlConversion;
+      cityElement.classList.remove('hide');
+   }
+}
 
 // reference 
 // 1. array map, filter and join video in hindi

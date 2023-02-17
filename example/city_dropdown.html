@@ -6,10 +6,35 @@
     <title>City drop down</title>
 </head>
 <body>
-
-    <select name="city" id="citylist">
-
-    </select>
+<style>
+    * {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 16px;
+        color: #333333;
+    }
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        max-width: 400px;
+        align-items: top;
+    }
+    .hide {
+        display: none;
+    }
+    
+</style>
+<div class="flex">
+    <div>
+        <label for="statelist">State List</label><br/>
+        <select name="state" id="statelist" onchange="onStateChange(event)"></select>
+    </div>
+    <div>
+        <label for="citylist">City List</label><br/>
+        <select name="city" id="citylist" class="hide"></select>
+    </div>
+</div>
+    
+    
     <script src="./city_dropdown.js"></script>
 </body>
 </html>
