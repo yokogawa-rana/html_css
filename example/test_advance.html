@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form>
+    <select id="stateId" onChange="checkStateValue(event)">
+    </select>
+    <select id="citiId" >
+    </select>
+</form>
+<script>
+
+    const data = [{  
+          "state":"West Bengal",
+          "districts":[  
+             "Alipurduar",
+             "Bankura",
+             "Birbhum",
+             "Burdwan (Bardhaman)",
+             "Cooch Behar",
+             "Dakshin Dinajpur (South Dinajpur)",
+             "Darjeeling",
+             "Hooghly",
+             "Howrah",
+             "Jalpaiguri",
+             "Kalimpong",
+             "Kolkata",
+             "Malda",
+             "Murshidabad",
+             "Nadia",
+             "North 24 Parganas",
+             "Paschim Medinipur (West Medinipur)",
+             "Purba Medinipur (East Medinipur)",
+             "Purulia",
+             "South 24 Parganas",
+             "Uttar Dinajpur (North Dinajpur)"
+          ]
+       },
+       {  
+          "state":"Karnataka",
+          "districts":[  
+             "Alipurduar",
+             "Bankura",
+             "Birbhum",
+             "Burdwan (Bardhaman)",
+             "Cooch Behar",
+             "Dakshin Dinajpur (South Dinajpur)",
+             "Darjeeling",
+             "Hooghly",
+             "Howrah",
+             "Jalpaiguri",
+             "Kalimpong",
+             "Kolkata",
+             "Malda",
+             "Murshidabad",
+             "Nadia",
+             "North 24 Parganas",
+             "Paschim Medinipur (West Medinipur)",
+             "Purba Medinipur (East Medinipur)",
+             "Purulia",
+             "South 24 Parganas",
+             "Uttar Dinajpur (North Dinajpur)"
+          ]
+       }
+    ];
+    
+    const stateList = data.map( function(value, index){
+        return "<option value="+index+">"+value.state+"</option>"
+    })
+    
+    const elementSelect = document.getElementById("stateId");
+    const elementSelectCities = document.getElementById("citiId");
+    
+    
+    elementSelect.innerHTML = stateList.join(' ')
+    // stateList.join(' ');
+
+    function checkStateValue(event){
+        const selectOption = event.currentTarget.value;
+        
+       const districts = data[selectOption].districts.map( function(value, index){
+            return "<option value=cities"+index+">"+value+"</option>"
+        })
+        console.log(districts.join(' '));
+        elementSelectCities.innerHTML = districts.join(' ');
+    }
+    </script>
+</body>
+</html>
+
